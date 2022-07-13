@@ -141,9 +141,9 @@ def eta(first_stop, second_stop, route_map):
     '''
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    for route in route_map:
-        x,y = route 
-    if first_stop == x and second_stop == y:
+    route = (first_stop, second_stop)
+    
+    if route in route_map:
         return route_map[route]["travel_time_mins"]
     else:
         keys = list(route_map.keys())
